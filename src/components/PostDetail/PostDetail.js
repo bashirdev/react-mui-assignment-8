@@ -19,6 +19,14 @@ const useStyles = makeStyles({
   },
 });
 
+const getDate=new Date();
+const option={
+  weekday:'long',
+  day:'numeric',
+  month:'long'
+}
+const today=getDate.toLocaleDateString(option);
+
 
 const PostDetail = (props) => {
 
@@ -32,7 +40,7 @@ const PostDetail = (props) => {
         <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          date  will be here
+        <h3>Date: {today}</h3>
          
         </Typography>
         <Typography variant="h5" component="h2">

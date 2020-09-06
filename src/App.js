@@ -16,17 +16,18 @@ function App() {
   <>
     <Header />
      <Router>
-   
+    
    <Switch>
         <Route path='/home'>
             <Home />
         </Route>
-          <Route exact path='/'>
-          <Home />
-          </Route>
+         
           <Route path='/PostDetail/:Postid'>
            <Post /> 
             
+          </Route>
+          <Route exact path='/'>
+          <Home />
           </Route>
           <Route path="*">
             <Notfound />
